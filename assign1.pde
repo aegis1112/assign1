@@ -27,8 +27,7 @@ void draw() {
   background(0);
   image(bg2,a,0);
   image(bg1,a2,0);
-  a=a+1;
-  a2=a2+1;
+  x=x+1;
   a=a%640-640;
   a2=a2%640-640;
   rect(5,5,w,25);
