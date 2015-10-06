@@ -5,13 +5,13 @@
   int xe=floor(random(580));
   int ye=floor(random(30,460));
   int w=floor(random(201));
-  int x,y,a,a2;
+  int x,x2,y,a,a2;
   
    void setup () {
   size(640,480) ;  // must use this size.
   // your code
   x=0;
-  x2=0
+  x2=0;
   y=0;
   a=x;
   a2=x2-640;
@@ -21,25 +21,23 @@
   enemy=loadImage("img/enemy.png");
   bg1=loadImage("img/bg1.png");
   bg2=loadImage("img/bg2.png");
-}
+
+  }
 
 void draw() {
   // your code
   background(0);
-  image(bg2,a,0);
-  image(bg1,a2,0);
+  image(bg2,x,0);
+  image(bg1,x2,0);
   x=x+1;
-  x2=x2+1;
-  if(a==640)｛
+  x=x%640;
+  x2=x-640;
+/*  if(a==640){
   x=0;
-  ｝
-  if(a2==640)｛
+  }
+  if(a2==640){
   x2=0;
-  ｝
- 
-  
-  
-  
+  }*/
   rect(5,5,w,25);
   fill(255,0,0);
   image(hpbar,0,0);
