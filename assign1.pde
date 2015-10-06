@@ -13,8 +13,9 @@
   x=0;
   x2=0;
   y=0;
-  a=x;
-  a2=x2-640;
+  a=0;
+  a2=640;
+  
   hpbar=loadImage("img/hp.png");
   fighter=loadImage("img/fighter.png");
   treasure=loadImage("img/treasure.png");
@@ -27,17 +28,21 @@
 void draw() {
   // your code
   background(0);
-  image(bg2,x,0);
-  image(bg1,x2,0);
-  x=x+1;
-  x=x%640;
-  x2=x-640;
-/*  if(a==640){
-  x=0;
+  image(bg2,a2,0);
+  image(bg1,a,0);
+  if(a2>=640)
+  {
+    a2=a2*-1;
   }
-  if(a2==640){
-  x2=0;
-  }*/
+  if(a>=640)
+  {
+    a=a*-1;
+  }
+  a2=a2+5;
+  a=a+5;
+
+
+
   rect(5,5,w,25);
   fill(255,0,0);
   image(hpbar,0,0);
