@@ -11,9 +11,10 @@
   size(640,480) ;  // must use this size.
   // your code
   x=0;
+  x2=0
   y=0;
   a=x;
-  a2=x-640;
+  a2=x2-640;
   hpbar=loadImage("img/hp.png");
   fighter=loadImage("img/fighter.png");
   treasure=loadImage("img/treasure.png");
@@ -28,16 +29,16 @@ void draw() {
   image(bg2,a,0);
   image(bg1,a2,0);
   x=x+1;
-  a=a%640;
-  a2=a2%640;
-  if(x>1&&a==0)
-  {
-    a=a-640;
+  x2=x2+1;
+  if(a==640)｛
+  x=0;
   ｝
-  if(x>1&&a2==0)
-  ｛
-   a2=a2-640;
-   ｝
+  if(a2==640)｛
+  x2=0;
+  ｝
+ 
+  
+  
   
   rect(5,5,w,25);
   fill(255,0,0);
