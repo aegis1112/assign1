@@ -12,8 +12,8 @@
   // your code
   x=0;
   y=0;
-  a=x+320;
-  a2=x-320;
+  a=x;
+  a2=x-640;
   hpbar=loadImage("img/hp.png");
   fighter=loadImage("img/fighter.png");
   treasure=loadImage("img/treasure.png");
@@ -29,8 +29,8 @@ void draw() {
   image(bg1,a2,0);
   a=a+1;
   a2=a2+1;
-  a=a%640;
-  a2=a2%640;
+  a=a%640-640;
+  a2=a2%640-640;
   rect(5,5,w,25);
   fill(255,0,0);
   image(hpbar,0,0);
